@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://js.arcgis.com/4.20/esri/themes/light/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://js.arcgis.com/4.20/"></script>
+    <script type="module" src="./app.js"></script>
+</head>
+
+<body>
+    <div id="performanceInfo">
+        <h4 id="title"></h4>
+        <table id="memory"></table>
+        <table id="count"></table>
+    </div>
+    <div id="viewDiv"></div>
+    <div id="widget">
+        <div class="container">
+            <div>畫質:{{quality}}</div>
+            <button v-on:click="toggle">切換</button>
+            <br>
+            <button v-on:click="refresh">重新載入</button>
+            <br>
+            <div id="bufferNum"></div>
+        </div>
+    </div>
+</body>
+
+</html>
